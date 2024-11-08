@@ -23,7 +23,7 @@ export function update() {
 		drag = input.cursorWorldPosition.subtract(dragStart); //鼠标拖动的起始位置
 		dragDist = drag.length(); //拖曳距离
 		if (dragDist > 0) {
-			drag = drag.divide(dragDist); //拖曳方向为单位矢量（我这么寻思的）
+			drag = drag.divide(dragDist); //拖曳方向为单位矢量
 			//将距离限制为顶部 DRAG_MAX_DISTANCE 常量中配置的最大距离
 			drag = dragStart.add(drag.multiply(Math.min(DRAG_MAX_DISTANCE, dragDist)));
 			//将骨骼移动到新计算出的拖动距离
